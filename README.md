@@ -9,3 +9,5 @@ componentDidMount: que, como vimos, é executado quando o componente termina de 
 componentDidUpdate: que é executado quando o componente recebe alguma atualização e não é executado na primeira vez que o componente carrega;
 componentWillUnmount: que é executado quando o componente é removido da tela;
 componentDidCatch: que é chamado quando a aplicação encontra algum erro durante a renderização, em algum método do ciclo de vida ou no construtor de componentes filhos.
+
+Documentação Hooks: https://pt-br.reactjs.org/docs/hooks-intro.html
