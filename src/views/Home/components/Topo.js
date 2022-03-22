@@ -23,7 +23,7 @@ class Topo extends React.Component {
   }
   render() {
     return (
-      <View estilos={estilos.topo}>
+      <View style={estilos.topo}>
         <Image source={logo} style={estilos.imagem} />
         <Text style={estilos.boasVindas}>{this.state.topo.boasVindas}</Text>
         <Text style={estilos.legenda}>{this.state.topo.legenda}</Text>

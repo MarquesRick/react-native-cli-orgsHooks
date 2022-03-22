@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {Text, View, Image, StyleSheet, FlatList} from 'react-native';
+import {Text, StyleSheet, FlatList} from 'react-native';
 import {carregaProdutores} from '../../../services/carregaDados';
+import Produtor from './Produtor';
 
 // *formato de função*
 // : remoando propriedade
@@ -28,7 +29,7 @@ export default function Produtores({topo: Topo}) {
       <FlatList
         data={lista}
         //mesmo papel do map()
-        renderItem={({item: {nome}}) => <Text>{nome}</Text>}
+        renderItem={({item}) => <Produtor {...item} />}
         keyExtractor={({nome}) => nome}
         ListHeaderComponent={topoLista}
       />

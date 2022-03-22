@@ -11,3 +11,5 @@ componentWillUnmount: que é executado quando o componente é removido da tela;
 componentDidCatch: que é chamado quando a aplicação encontra algum erro durante a renderização, em algum método do ciclo de vida ou no construtor de componentes filhos.
 
 Documentação Hooks: https://pt-br.reactjs.org/docs/hooks-intro.html
+
+accessibilityLabel = para pessoas com deficiencia visual melhorar sua interação com o app
