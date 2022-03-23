@@ -1,30 +1,79 @@
-criar projeto: npx react-native init orgsHook
-rodar no android: npx react-native run-android
-rodar no ios: npx react-native run-ios
-rodar o metro: npm start
+<a href="https://www.linkedin.com/in/henri-marques/">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/37425086?v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Henrique Marques</b></sub></a> <a href="https://www.linkedin.com/in/henri-marques/" title="Linkedin">🧑🏻‍💻
+ </a>
 
-Lembre-se: caso baixe um projeto do zero, rode os comandos npm install para baixar as dependências do node e, caso for rodar para iOS, cd ios && pod install para baixar as dependências nativas de iOS.
 
-componentDidMount: que, como vimos, é executado quando o componente termina de renderizar;
-componentDidUpdate: que é executado quando o componente recebe alguma atualização e não é executado na primeira vez que o componente carrega;
-componentWillUnmount: que é executado quando o componente é removido da tela;
-componentDidCatch: que é chamado quando a aplicação encontra algum erro durante a renderização, em algum método do ciclo de vida ou no construtor de componentes filhos.
+Made with ❤️ by Henrique Marques 👋🏽 Entre em contato!
 
-Documentação Hooks: https://pt-br.reactjs.org/docs/hooks-intro.html
+[![Twitter Badge](https://img.shields.io/badge/-@Henrimarques18-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/Henrimarques18)](https://twitter.com/Henrimarques18) [![Linkedin Badge](https://img.shields.io/badge/-Henrique_Marques-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/henri-marques/)](https://www.linkedin.com/in/henri-marques/) 
+[![Gmail Badge](https://img.shields.io/badge/-henmarques-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:henmarques2009@gmail.com)](mailto:henmarques2009@gmail.com)
 
-accessibilityLabel = para pessoas com deficiencia visual melhorar sua interação com o app
+---
+<h1 align="center">OrgsHook</h1>
 
-Hooks Básicos:
+<h1 align="center">
+    <a href="https://pt-br.reactjs.org/">🔗 React Native CLI</a>
+</h1>
+<p align="center">🚀 simple application developed with React Native CLI</p>
 
-useState: usado para gerenciar estados;
-useEffect: usado para gerar efeitos colaterais a certas atualizações;
-useContext: usado para gerenciar contextos entre componentes distintos.
-Hooks Adicionais:
+###  🏗  Running/Creating the project
+```bash
+# Create
+$ npx react-native init orgsHook
 
-useReducer: uma alternativa ao useState quando há lógicas complexas;
-useCallback: memoriza uma função, que só é atualizada quando os valores recebidos como argumento são atualizados;
-useMemo: semelhante ao useCallback, mas ao invés de função, armazena um valor;
-useRef: usado normalmente para acessar propriedades de componentes “filhos”;
-useImperativeHandle: usado para personalizar o valor da instância que será acessível aos componentes “pais”;
-useLayoutEffect: semelhante ao useEffect, porém é disparado na mesma fase que componentDidMount e componentDidUpdate. É preferível o uso do useEffect;
-useDebugValue: usado para definir um "label" em hooks customizados que irá aparecer somente em ferramentas de debug.
+# Run on android
+$ npx react-native run-android
+
+# Run on IOS
+$ npx react-native run-ios
+
+# Run Metro
+$ npm start
+``` 
+###  ⚠️  Important
+
+Remember: if you download a project from scratch, run ```bash npm install``` commands to download node dependencies and, if running for iOS, ```bash cd ios && pod install``` to download native iOS dependencies.
+
+### 💿 Technologies
+
+- [Node.js](https://nodejs.org/en/)
+- [React Native](https://reactnative.dev/)
+- [React Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html)
+
+### ℹ️  Info
+<b>componentDidMount:</b> which, as we have seen, is executed when the component finishes rendering;
+
+<b>componentDidUpdate:</b> which is executed when the component receives an update and is not executed the first time the component loads;
+
+<b>componentWillUnmount:</b> which is executed when the component is removed from the screen;
+
+<b>componentDidCatch:</b> which is called when the application encounters an error during rendering, in some lifecycle method or in the constructor of child components.
+
+<b>accessibilityLabel</b> = for visually impaired people to improve their interaction with the app
+
+#### Basic Hooks:
+
+<b>useState:</b> used to manage states;
+
+<b>useEffect:</b> used to generate side effects to certain updates;
+
+<b>useContext:</b> used to manage contexts between different components.
+
+#### Additional Hooks:
+
+<b>useReducer:</b> an alternative to useState when there are complex logics;
+
+<b>useCallback:</b> memorizes a function, which is only updated when the values received as an argument are updated;
+
+<b>useMemo:</b> similar to useCallback, but instead of a function, it stores a value;
+
+<b>useRef:</b> normally used to access properties of “child” components;
+
+<b>useImperativeHandle:</b> used to customize the instance value that will be accessible to the “parent” components;
+
+<b>useLayoutEffect:</b> similar to useEffect, but fired in the same phase as componentDidMount and componentDidUpdate. UseEffect is preferred;
+
+<b>useDebugValue:</b> used to set a "label" in custom hooks that will only appear in debug tools.
+
