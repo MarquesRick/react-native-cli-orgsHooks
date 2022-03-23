@@ -5,8 +5,8 @@ import Estrelas from '../../../components/Estrelas';
 export default function Produtor({nome, imagem, distancia, estrelas}) {
   const [selecionado, inverterSelecionado] = useReducer(
     // eslint-disable-next-line no-shadow
-    selecionado => !selecionado,
-    false,
+    selecionado => !selecionado, //estado atual (selecionado) e invertemos o selecionado
+    false, //valor inicial
   );
   return (
     <TouchableOpacity style={estilos.cartao} onPress={inverterSelecionado}>
