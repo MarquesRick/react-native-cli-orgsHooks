@@ -52,16 +52,18 @@ Remember: if you download a project from scratch, run ```bash npm install``` com
 <b>componentDidCatch:</b> which is called when the application encounters an error during rendering, in some lifecycle method or in the constructor of child components.
 
 <b>accessibilityLabel</b> = for visually impaired people to improve their interaction with the app
+---
 
-#### Basic Hooks:
+### Basic Hooks:
 
 <b>useState:</b> used to manage states;
 
 <b>useEffect:</b> used to generate side effects to certain updates;
 
 <b>useContext:</b> used to manage contexts between different components.
+---
 
-#### Additional Hooks:
+### Additional Hooks:
 
 <b>useReducer:</b> an alternative to useState when there are complex logics;
 
