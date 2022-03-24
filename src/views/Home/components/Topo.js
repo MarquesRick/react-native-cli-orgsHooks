@@ -1,40 +1,41 @@
 import React from 'react';
 import {Text, View, Image, StyleSheet} from 'react-native';
-import {carregaTopo} from '../../../services/carregaDados';
+
 import logo from '../../../assets/logo.png';
+import useTextos from '../../../hooks/useTextos';
 
 // *formato de classe*
 // mudanca para class para carregarmos apenas uma vez (componentDidMount)
-class Topo extends React.Component {
-  state = {
-    topo: {
-      boasVindas: '',
-      legenda: '',
-    },
-  };
+export default function Topo({melhoresProdutores}) {
+  const {boasVindas, legenda, legendaMelhoresProdutores} = useTextos();
 
-  atualizaTopo() {
-    const retorno = carregaTopo();
-    //sempre usar setState para setar o valor
-    this.setState({topo: retorno});
-  }
-  componentDidMount() {
-    this.atualizaTopo();
-  }
-  render() {
-    return (
+  return (
+    <>
       <View style={estilos.topo}>
         <Image source={logo} style={estilos.imagem} />
-        <Text style={estilos.boasVindas}>{this.state.topo.boasVindas}</Text>
-        <Text style={estilos.legenda}>{this.state.topo.legenda}</Text>
+        <Text style={estilos.boasVindas}>
+          {melhoresProdutores ? '' : boasVindas}
+        </Text>
+        <Text style={estilos.legenda}>
+          {melhoresProdutores ? legendaMelhoresProdutores : legenda}
+        </Text>
       </View>
-    );
-  }
+    </>
+  );
 }
 const estilos = StyleSheet.create({
   topo: {
     backgroundColor: '#F6F6F6',
     padding: 16,
+  },
+  compra: {
+    backgroundColor: '#EAF5F3',
+    padding: 16,
+  },
+  compraMensagem: {
+    fontSize: 16,
+    lineHeight: 26,
+    color: '#464646',
   },
   imagem: {
     width: 70,
@@ -53,5 +54,3 @@ const estilos = StyleSheet.create({
     color: '#A3A3A3',
   },
 });
-
-export default Topo;
