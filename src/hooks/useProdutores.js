@@ -1,19 +1,22 @@
 import {useState, useEffect} from 'react';
 import {carregaProdutores} from '../services/carregaDados';
 
-export default function useProdutores() {
-  const [titulo, setTitulo] = useState('');
+export default function useProdutores(melhoresProdutores) {
   const [lista, setLista] = useState([]);
 
   useEffect(() => {
     const retorno = carregaProdutores();
-    // ordenar por distancia
     retorno.lista.sort(
       (produtor1, produtor2) => produtor1.distancia - produtor2.distancia,
     );
-    setTitulo(retorno.titulo);
-    setLista(retorno.lista);
+    let novaLista = retorno.lista;
+
+    if (melhoresProdutores) {
+      novaLista = novaLista.filter(produtor => produtor.estrelas > 3);
+    }
+    setLista(novaLista);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return [titulo, lista];
+  return lista;
 }

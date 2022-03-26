@@ -1,22 +1,23 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
-import Home from './src/views/Home';
+import {StatusBar, SafeAreaView} from 'react-native';
+import useProdutores from './src/hooks/useProdutores';
 
-function App() {
+import Home from './src/views/Home';
+import Cesta from './src/views/Cesta';
+
+export default function App() {
+  const produtores = useProdutores(false);
+
   return (
-    <>
-      <SafeAreaView style={estilos.tela}>
-        <Home />
-      </SafeAreaView>
-    </>
+    <SafeAreaView style={{flex: 1}}>
+      <StatusBar />
+      <Home melhoresProdutores={true} />
+      {/* {produtores.length > 0 && (
+        <Cesta
+          produtor={{nome: produtores[0].nome, imagem: produtores[0].imagem}}
+          {...produtores[0].cestas[0]}
+        />
+      )} */}
+    </SafeAreaView>
   );
 }
-
-//expandir o max que puder na tela
-const estilos = StyleSheet.create({
-  tela: {
-    flex: 1,
-  },
-});
-
-export default App;
