@@ -31,6 +31,9 @@ $ npx react-native run-ios
 
 # Run Metro
 $ npm start
+
+# Install Navigations - version 6.x
+$ npm install @react-navigation/native@^6.x
 ``` 
 ###  ⚠️  Important
 
