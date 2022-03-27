@@ -34,6 +34,12 @@ $ npm start
 
 # Install Navigations - version 6.x
 $ npm install @react-navigation/native@^6.x
+
+# Install dependencies for Navigations
+$ npm install react-native-screens react-native-safe-area-context
+
+# For IOS, install this another dependencie
+$ npx pod-install ios
 ``` 
 ###  ⚠️  Important
 
