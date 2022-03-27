@@ -41,6 +41,7 @@ Remember: if you download a project from scratch, run ```bash npm install``` com
 - [Node.js](https://nodejs.org/en/)
 - [React Native](https://reactnative.dev/)
 - [React Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html)
+- [React Navigation](https://reactnavigation.org/)
 
 ### ℹ️  Info
 <b>componentDidMount:</b> which, as we have seen, is executed when the component finishes rendering;
