@@ -42,7 +42,7 @@ $ npm install react-native-screens react-native-safe-area-context
 $ npx pod-install ios
 ``` 
 Navigation For Android, execute according to the steps informed in the article:
-<a href="https://reactnavigation.org/docs/getting-started/#:~:text=react%2Dnative%2Dscreens%20package%20requires%20one%20additional%20configuration%20step%20to%20properly%20work%20on%20Android%20devices.%20Edit%20MainActivity.java%20file%20which%20is%20located%20in%20android/app/src/main/java/%3Cyour%20package%20name%3E/MainActivity.java">Docs</a>
+<a href="https://reactnavigation.org/docs/getting-started/#:~:text=react%2Dnative%2Dscreens%20package%20requires%20one%20additional%20configuration%20step%20to%20properly%20work%20on%20Android%20devices.%20Edit%20MainActivity.java%20file%20which%20is%20located%20in%20android/app/src/main/java/%3Cyour%20package%20name%3E/MainActivity.java" target="_blank">Docs</a>
 ###  ⚠️  Important
 
 Remember: if you download a project from scratch, run ```bash npm install``` commands to download node dependencies and, if running for iOS, ```bash cd ios && pod install``` to download native iOS dependencies.
