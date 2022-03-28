@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, Image, StyleSheet} from 'react-native';
+import { View, Image, StyleSheet } from 'react-native';
 
 import Texto from '../../../components/Texto';
 
-export default function Item({item: {nome, imagem}}) {
+export default function Item({ item: { nome, imagem } }) {
   return (
     <View style={estilos.item}>
       <Image source={imagem} style={estilos.imagem} />
