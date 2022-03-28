@@ -5562,10 +5562,10 @@
     "setimmediate" "^1.0.5"
     "string-hash-64" "^1.0.3"
 
-"react-native-safe-area-context@^4.2.3", "react-native-safe-area-context@>= 3.0.0":
-  "integrity" "sha512-x82aq+OVe1GXlJhvbj83JDKZgEjdb/ROWJ7yOlAe8k+vo+lD2WyBXSxR7pmzIJVDhuBh3ZWZhgejuR3IojaDhw=="
-  "resolved" "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-4.2.3.tgz"
-  "version" "4.2.3"
+"react-native-safe-area-context@^4.0.1-rc.5", "react-native-safe-area-context@>= 3.0.0":
+  "integrity" "sha512-x/wRZE7STwJt5FmmVcdnhB60NEP9YCppFiyajiXHPY5KfCp2dsfozxdVVdF94n2rmB+Phd9agE3cHOfdyE7K/A=="
+  "resolved" "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-4.0.1-rc.5.tgz"
+  "version" "4.0.1-rc.5"
 
 "react-native-safe-area@^0.5.1":
   "integrity" "sha512-gBLv93P90sM6hk5HzUwTXzFuSDazTpg2ONi5iL9pnUsUfwdw2L9SKgjgVroxX10leGB9+0zz6/ycV+mItqr8OQ=="

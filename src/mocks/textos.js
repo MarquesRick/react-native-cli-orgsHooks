@@ -1,5 +1,5 @@
 const textos = {
-  boasVindas: 'Olá Henrique',
+  boasVindas: 'Olá Henrique!',
   legenda: 'Encontre os produtores mais próximos a você!',
   legendaMelhoresProdutores: 'Veja os produtores com 4+ estrelas!',
   tituloProdutores: 'Produtores',
