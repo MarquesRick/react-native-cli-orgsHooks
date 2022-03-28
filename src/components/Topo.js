@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, StyleSheet, Dimensions, TouchableOpacity} from 'react-native';
+import { Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 
 import Texto from './Texto';
 
@@ -10,7 +10,11 @@ import VoltarSVG from '../assets/voltar.svg';
 //const largura = Dimensions.get('screen').width;
 const ALTURA_PADRAO = 270;
 
-export default function Topo({titulo, imagem = topo, altura = ALTURA_PADRAO}) {
+export default function Topo({
+  titulo,
+  imagem = topo,
+  altura = ALTURA_PADRAO,
+}) {
   const estilos = funcaoEstilos(altura);
   return (
     <>
