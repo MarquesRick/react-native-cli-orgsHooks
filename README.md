@@ -43,6 +43,9 @@ $ npx pod-install ios
 
 # Install tab navigation
 $ npm install @react-navigation/bottom-tabs
+
+# Install stack navigation
+$ npm install @react-navigation/native-stack
 ``` 
 Navigation For Android, execute according to the steps informed in the article:
 <a href="https://reactnavigation.org/docs/getting-started/#:~:text=react%2Dnative%2Dscreens%20package%20requires%20one%20additional%20configuration%20step%20to%20properly%20work%20on%20Android%20devices.%20Edit%20MainActivity.java%20file%20which%20is%20located%20in%20android/app/src/main/java/%3Cyour%20package%20name%3E/MainActivity.java" target="_blank">Docs</a>
