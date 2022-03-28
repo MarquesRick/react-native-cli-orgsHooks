@@ -1,26 +1,23 @@
 import React from 'react';
-import {FlatList, StyleSheet, View} from 'react-native';
+import { FlatList, StyleSheet, View } from 'react-native';
 
 import Texto from '../../components/Texto';
-
-import Topo from '../../components/Topo';
 import useTextos from '../../hooks/useTextos';
 import Detalhes from './components/Detalhes';
 import Item from './components/Item';
 
-export default function Cesta({detalhes, itens, produtor}) {
-  const {topoCesta, tituloItens} = useTextos();
+export default function Cesta({ detalhes, itens, produtor }) {
+  const { topoCesta, tituloItens } = useTextos();
 
   return (
     <>
       <FlatList
         data={itens}
         renderItem={Item}
-        keyExtractor={({nome}) => nome}
+        keyExtractor={({ nome }) => nome}
         ListHeaderComponent={() => {
           return (
             <>
-              <Topo titulo={topoCesta} />
               <View style={estilos.cesta}>
                 <Detalhes {...detalhes} produtor={produtor} />
                 <Texto style={estilos.titulo}>{tituloItens}</Texto>
