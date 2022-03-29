@@ -46,12 +46,57 @@ $ npm install @react-navigation/bottom-tabs
 
 # Install stack navigation
 $ npm install @react-navigation/native-stack
+
+# In my case I needed to install
+$ npm i --save react-native-circular-progress react-native-svg && react-native link react-native-svg
 ``` 
 Navigation For Android, execute according to the steps informed in the article:
 <a href="https://reactnavigation.org/docs/getting-started/#:~:text=react%2Dnative%2Dscreens%20package%20requires%20one%20additional%20configuration%20step%20to%20properly%20work%20on%20Android%20devices.%20Edit%20MainActivity.java%20file%20which%20is%20located%20in%20android/app/src/main/java/%3Cyour%20package%20name%3E/MainActivity.java" target="_blank">Docs</a>
 ###  ⚠️  Important
 
 Remember: if you download a project from scratch, run ```npm install``` commands to download node dependencies and, if running for iOS, ```cd ios && pod install``` to download native iOS dependencies.
+
+In my case I needed to change Metro.config.js for this:
+
+Old:
+```javascript
+module.exports = {
+  transformer: {
+    getTransformOptions: async () => ({
+      transform: {
+        experimentalImportSupport: false,
+        inlineRequires: true,
+      },
+    }),
+  },
+};
+```
+
+Updated:
+```javascript
+const { getDefaultConfig } = require('metro-config');
+
+module.exports = (async () => {
+  const {
+    resolver: { sourceExts, assetExts },
+  } = await getDefaultConfig();
+  return {
+    transformer: {
+      getTransformOptions: async () => ({
+        transform: {
+          experimentalImportSupport: false,
+          inlineRequires: false,
+        },
+      }),
+      babelTransformerPath: require.resolve('react-native-svg-transformer'),
+    },
+    resolver: {
+      assetExts: assetExts.filter(ext => ext !== 'svg'),
+      sourceExts: [...sourceExts, 'svg'],
+    },
+  };
+})();
+```
 
 ### 💿 Technologies
 
