@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, StyleSheet, TouchableOpacity} from 'react-native';
+import { Image, StyleSheet, TouchableOpacity } from 'react-native';
 import estrela from '../assets/estrela.png';
 import estrelaCinza from '../assets/estrelaCinza.png';
 

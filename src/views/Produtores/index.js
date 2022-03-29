@@ -6,6 +6,7 @@ import Produtor from './components/Produtor';
 import Topo from './components/Topo';
 import useProdutores from '../../hooks/useProdutores';
 import useTextos from '../../hooks/useTextos';
+import topo from '../../assets/produtores/topo.png';
 
 export default function Produtores({ melhoresProdutores }) {
   const navigation = useNavigation();
@@ -15,7 +16,11 @@ export default function Produtores({ melhoresProdutores }) {
   const TopoLista = () => {
     return (
       <>
-        <Topo melhoresProdutores={melhoresProdutores} />
+        <Topo
+          melhoresProdutores={melhoresProdutores}
+          imagem={topo}
+          altura={150}
+        />
         <Text style={estilos.titulo}>{tituloProdutores}</Text>
       </>
     );
