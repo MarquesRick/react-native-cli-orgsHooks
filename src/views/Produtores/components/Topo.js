@@ -1,13 +1,11 @@
 import React from 'react';
-import {Text, View, Image, StyleSheet} from 'react-native';
+import { Text, View, Image, StyleSheet } from 'react-native';
 
 import logo from '../../../assets/logo.png';
 import useTextos from '../../../hooks/useTextos';
 
-// *formato de classe*
-// mudanca para class para carregarmos apenas uma vez (componentDidMount)
-export default function Topo({melhoresProdutores}) {
-  const {boasVindas, legenda, legendaMelhoresProdutores} = useTextos();
+export default function Topo({ melhoresProdutores }) {
+  const { boasVindas, legenda, legendaMelhoresProdutores } = useTextos();
 
   return (
     <>
@@ -23,6 +21,7 @@ export default function Topo({melhoresProdutores}) {
     </>
   );
 }
+
 const estilos = StyleSheet.create({
   topo: {
     backgroundColor: '#F6F6F6',

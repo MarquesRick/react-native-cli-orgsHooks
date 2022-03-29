@@ -1,5 +1,5 @@
-import React, {useMemo} from 'react';
-import {Text, View, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import React, { useMemo } from 'react';
+import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Estrelas from '../../../components/Estrelas';
 
 const distanciaEmMetros = distancia => {
@@ -13,14 +13,6 @@ export default function Produtor({
   estrelas,
   aoPressionar,
 }) {
-  // const [selecionado, inverterSelecionado] = useReducer(
-  //   // eslint-disable-next-line no-shadow
-  //   selecionado => !selecionado, //estado atual (selecionado) e invertemos o selecionado
-  //   false, //valor inicial
-  // );
-
-  // salva na memoria para chamar apenas uma vez a função
-  // parecido com useEffect
   const distanciaTexto = useMemo(
     () => distanciaEmMetros(distancia),
     [distancia],
@@ -47,9 +39,11 @@ const estilos = StyleSheet.create({
     marginHorizontal: 16,
     borderRadius: 6,
     flexDirection: 'row',
-    //efeito de sombra para o android
+
+    // Android
     elevation: 4,
-    //efeito de sombra para o ios
+
+    // iOS
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -66,7 +60,7 @@ const estilos = StyleSheet.create({
     marginLeft: 16,
   },
   informacoes: {
-    flex: 1, //cresce ate o final
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginLeft: 8,
