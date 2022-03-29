@@ -1,9 +1,10 @@
 import React from 'react';
 import { useRoute } from '@react-navigation/native';
+import useTextos from '../../hooks/useTextos';
 import { FlatList, StyleSheet, Text, View, Image } from 'react-native';
 import Cesta from './componentes/Cesta';
 import Topo from '../../components/Topo';
-import useTextos from '../../hooks/useTextos';
+
 import topo from '../../assets/produtores/topo.png';
 
 export default function Produtor() {
