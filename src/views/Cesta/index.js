@@ -5,6 +5,7 @@ import Texto from '../../components/Texto';
 import useTextos from '../../hooks/useTextos';
 import Detalhes from './components/Detalhes';
 import Item from './components/Item';
+import Topo from '../../components/Topo';
 
 export default function Cesta({ detalhes, itens, produtor }) {
   const { topoCesta, tituloItens } = useTextos();
@@ -18,6 +19,7 @@ export default function Cesta({ detalhes, itens, produtor }) {
         ListHeaderComponent={() => {
           return (
             <>
+              <Topo titulo={topoCesta} />
               <View style={estilos.cesta}>
                 <Detalhes {...detalhes} produtor={produtor} />
                 <Texto style={estilos.titulo}>{tituloItens}</Texto>
