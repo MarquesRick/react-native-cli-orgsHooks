@@ -1,5 +1,5 @@
-import {useState, useEffect} from 'react';
-import {carregaProdutores} from '../services/carregaDados';
+import { useState, useEffect } from 'react';
+import { carregaProdutores } from '../services/carregaDados';
 
 export default function useProdutores(melhoresProdutores) {
   const [lista, setLista] = useState([]);

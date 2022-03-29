@@ -1,6 +1,6 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
-import {carregaTextos} from '../services/carregaDados';
+import { carregaTextos } from '../services/carregaDados';
 
 export default function useTextos() {
   const [textos, setTextos] = useState({});
