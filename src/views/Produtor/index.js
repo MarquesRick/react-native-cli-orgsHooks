@@ -1,9 +1,10 @@
-import { useRoute } from '@react-navigation/native';
 import React from 'react';
-import { FlatList, StyleSheet, Text, TouchableOpacityBase } from 'react-native';
+import { useRoute } from '@react-navigation/native';
+import { FlatList, StyleSheet, Text, View, Image } from 'react-native';
 import Cesta from './componentes/Cesta';
 import Topo from '../../components/Topo';
 import useTextos from '../../hooks/useTextos';
+import topo from '../../assets/produtores/topo.png';
 
 export default function Produtor() {
   const route = useRoute();
@@ -13,10 +14,19 @@ export default function Produtor() {
   const TopoLista = () => {
     return (
       <>
-        <Topo titulo={tituloProdutor} />
+        <Topo titulo={tituloProdutor} imagem={topo} altura={150} />
+        <View style={estilos.conteudo}>
+          <View style={estilos.logo}>
+            <Image source={imagem} style={estilos.produtorImage} />
+            <Text style={estilos.produtor}>{nome}</Text>
+          </View>
+
+          <Text style={estilos.cestas}>{tituloCestas}</Text>
+        </View>
       </>
     );
   };
+
   return (
     <FlatList
       ListHeaderComponent={TopoLista}
