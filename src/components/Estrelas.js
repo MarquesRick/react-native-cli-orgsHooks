@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import {View, StyleSheet} from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
 import Estrela from './Estrela';
 
 export default function Estrelas({
   quantidade: quantidadeAntiga,
-  editavel = true,
-  grande = true,
+  editavel = false,
+  grande = false,
 }) {
   const [quantidade, setQuantidade] = useState(quantidadeAntiga);
 

@@ -7,7 +7,7 @@ import Gradiente from '../assets/gradiente.svg';
 import topo from '../assets/topo.png';
 import VoltarSVG from '../assets/voltar.svg';
 
-//const largura = Dimensions.get('screen').width;
+const largura = Dimensions.get('screen').width;
 const ALTURA_PADRAO = 270;
 
 export default function Topo({
@@ -19,7 +19,11 @@ export default function Topo({
   return (
     <>
       <Image source={imagem} style={estilos.topo} />
-      {/* <Gradiente width={2} height={(130 / 360) * 2} style={estilos.gradiente} /> */}
+      <Gradiente
+        width={largura}
+        height={(130 / 360) * largura}
+        style={estilos.gradiente}
+      />
       <Texto style={estilos.titulo}>{titulo}</Texto>
       <TouchableOpacity onPress={() => {}} style={estilos.botaoVoltar}>
         <VoltarSVG color="white" style={estilos.voltar} />
