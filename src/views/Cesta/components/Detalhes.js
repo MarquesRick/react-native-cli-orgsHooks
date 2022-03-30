@@ -19,7 +19,9 @@ export default function Detalhes({ nome, produtor, descricao, preco }) {
       <Texto style={estilos.descricao}>{descricao}</Texto>
       <Texto style={estilos.preco}>{preco}</Texto>
 
-      <TouchableOpacity style={estilos.botao} onPress={() => {}}>
+      <TouchableOpacity
+        style={estilos.botao}
+        onPress={() => navigation.popToTop()}>
         <Texto style={estilos.textoBotao}>{botaoComprar}</Texto>
       </TouchableOpacity>
     </>
