@@ -23,23 +23,14 @@ Made with ❤️ by Henrique Marques 👋🏽 Say hello!
 # Create
 $ npx react-native init orgsHook
 
-# Run on android
-$ npx react-native run-android
-
-# Run on IOS
-$ npx react-native run-ios
-
-# Run Metro
-$ npm start
+# Install react native svg transformer for using an image as component
+$ npm install react-native-svg-transformer
 
 # Install Navigations - version 6.x
 $ npm install @react-navigation/native@^6.x
 
 # Install dependencies for Navigations
 $ npm install react-native-screens react-native-safe-area-context
-
-# For IOS, install this another dependencie
-$ npx pod-install ios
 
 # Install tab navigation
 $ npm install @react-navigation/bottom-tabs
@@ -49,6 +40,18 @@ $ npm install @react-navigation/native-stack
 
 # In my case I needed to install
 $ npm i --save react-native-circular-progress react-native-svg && react-native link react-native-svg
+
+# For IOS, install this another dependencie
+$ npx pod-install ios
+
+# Run Metro
+$ npm start
+
+# Run on android
+$ npx react-native run-android
+
+# Run on IOS
+$ npx react-native run-ios
 ``` 
 Navigation For Android, execute according to the steps informed in the article:
 <a href="https://reactnavigation.org/docs/getting-started/#:~:text=react%2Dnative%2Dscreens%20package%20requires%20one%20additional%20configuration%20step%20to%20properly%20work%20on%20Android%20devices.%20Edit%20MainActivity.java%20file%20which%20is%20located%20in%20android/app/src/main/java/%3Cyour%20package%20name%3E/MainActivity.java" target="_blank">Docs</a>
