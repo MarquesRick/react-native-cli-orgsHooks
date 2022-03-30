@@ -1,10 +1,12 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { Image, StyleSheet, View, TouchableOpacity } from 'react-native';
 
 import useTextos from '../../../hooks/useTextos';
 import Texto from '../../../components/Texto';
 
 export default function Detalhes({ nome, produtor, descricao, preco }) {
+  const navigation = useNavigation();
   const { botaoComprar } = useTextos();
 
   return (
