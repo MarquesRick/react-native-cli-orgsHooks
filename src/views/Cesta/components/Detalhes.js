@@ -23,7 +23,11 @@ export default function Detalhes({ nome, produtor, descricao, preco }) {
         style={estilos.botao}
         onPress={() =>
           navigation.navigate('Resumo', {
-            compra: { nome, timeStamp: +new Date() },
+            compra: {
+              nome,
+              timeStamp: +new Date(),
+              produtorNome: produtor.nome,
+            },
           })
         }>
         <Texto style={estilos.textoBotao}>{botaoComprar}</Texto>

@@ -15,7 +15,7 @@ export default function Resumo() {
   } = useTextos();
   const navigation = useNavigation();
   const route = useRoute();
-  const { nome } = route.params?.compra;
+  const { nome, produtorNome } = route.params?.compra;
 
   return (
     <View style={estilos.tela}>
@@ -46,9 +46,9 @@ export default function Resumo() {
 
           <TouchableOpacity
             style={[estilos.botao, estilos.botaoProdutor]}
-            onPress={() => {}}>
+            onPress={() => navigation.goBack()}>
             <Text style={[estilos.textoBotao, estilos.textoBotaoProdutor]}>
-              {botaoProdutorCompra}
+              {`Voltar ao produtor ${produtorNome}`}
             </Text>
           </TouchableOpacity>
         </View>
