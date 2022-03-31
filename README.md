@@ -149,11 +149,11 @@ module.exports = (async () => {
 
 ---
 
-### Navigation Props
+### Navigation Props:
 <b>The reset navigation method:</b><br/>
 When we use reset, all application navigation is restarted, as if the app had been opened again. We can pass parameters to this splash screen.
-<br/><b>The popToTop navigation method:</b><br/>
+<br/><br/><b>The popToTop navigation method:</b><br/>
 Using popToTop, we can pop all the screens and go back to the top of the stack, however, we are not able to pass parameters to this initial screen.
-<br/><b>The navigation method navigate:</b><br/>
+<br/><br/><b>The navigation method navigate:</b><br/>
 In general, the navigate method is what we use the most to navigate from one screen to another - and it's what we used to stack the screens on our stack. But when we use the navigate to a screen that already exists on the stack, instead of stacking another identical screen, react-navigation removes the previous screens from the stack and reopens that specific screen. The effect is similar to pop or popToTop, however we are able to pass parameters when using navigate.
 
