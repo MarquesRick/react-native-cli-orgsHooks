@@ -40,13 +40,13 @@ export default function Resumo() {
 
           <TouchableOpacity
             style={estilos.botao}
-            onPress={() => navigation.navigate('HomeScreen')}>
+            onPress={() => navigation.popToTop()}>
             <Text style={estilos.textoBotao}>{botaoHomeCompra}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             style={[estilos.botao, estilos.botaoProdutor]}
-            onPress={() => navigation.goBack()}>
+            onPress={() => navigation.pop(2)}>
             <Text style={[estilos.textoBotao, estilos.textoBotaoProdutor]}>
               {`Voltar ao produtor ${produtorNome}`}
             </Text>
